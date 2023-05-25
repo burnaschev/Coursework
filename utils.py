@@ -2,7 +2,8 @@ import json
 
 
 def load_jsonfile(filename):
-    filename = json.loads(filename)
-    return filename
-
+    """Считываем из файла данные и
+    переводим на язык python"""
+    with open(filename, encoding='utf8') as file:
+        return json.loads(file.read())
 
